@@ -230,7 +230,7 @@ def main():
             st.header("🔒 ورود به داشبورد")
             pwd = st.text_input("رمز عبور", type="password")
             if st.button("ورود"):
-                if pwd == "Farm2025!":  # رمز دلخواه خود را اینجا بگذارید
+                if pwd == st.secrets["APP_PASSWORD"]:  # رمز دلخواه خود را اینجا بگذارید
                     st.session_state.authenticated = True
                     st.rerun()
                 else:
